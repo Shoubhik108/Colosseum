@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className='bg-homeBg pb-8'>
       <div className="heroBg bg-no-repeat bg-cover bg-center w-full h-96 opacity-40 bg-black"></div>
-      <div className="absolute top-44 text-white">
-        <div className='flex flex-col w-screen items-center justify-center'>
+      <div className="absolute top-44 text-white left-1/4">
+        <div className='flex flex-col items-center justify-center'>
           <h1 className='text-3xl font-bold items-start '>Welcome to Colosseum</h1>
           <h1 className='text-xl font-bold'>'Enjoy the real feeling of visiting theaters and movies with the ease of home'</h1>
 
@@ -42,7 +42,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className='pt-16 flex flex-col w-screen items-center justify-center px-44 text-center'>
+      <div className='pt-16 flex flex-col items-center justify-center px-44 text-center'>
         <h1 className='text-white text-3xl'>Live theatre events</h1>
         <p className='text-white text-2xl'>Join the event and watch theatre live</p>
         <div className="flex flex-wrap flex-col-2 justify-around w-full px-16 pt-8 gap-4">
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='pt-16 flex flex-col w-screen items-center justify-center px-44 text-center'>
+      <div className='pt-16 flex flex-col items-center justify-center px-44 text-center'>
         <h1 className='text-white text-3xl'>Public scheduled events</h1>
         <p className='text-white text-2xl'>Join the public event with your family and friends</p>
         <div className="flex flex-wrap flex-col-2 justify-around w-full px-16 pt-8 gap-4">

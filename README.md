@@ -1,5 +1,16 @@
 # Colosseum
 
+<!-- Temp. -->
+## ToDo:
+
+- [ ] Login and Message
+- [ ] Navbar
+- [x] Chatbot
+- [x] Home
+- [x] Recommendation
+- [ ] Go Live
+- [ ] Schedule Event
+
 ## 💡 Inspiration
 
 Due to COVID-19, we are disconnected from the outer world and we miss to got out and watch theatre and movies with our friends and family. We are in a situation where we can't do anything and we can't even go out and play with our friends. On the other hand the threater workers are losing their jobs and they are not getting enough money to pay for their living. So we decided to build a platform that will help them to get back to work and to get enough money to pay for their living and to get back to having fun with your friends and family.
@@ -15,7 +26,7 @@ Colosseum is a web application that allows you to create a new event to watch mo
 - MongoDB: For database
 - Docker: For deployment
 - Firebase: For authentication and storage
-- Python & Tensorflow: For movie and show recommendations
+- Python, SciPy and Surprise: For movie and show recommendations
 
 ## Best Domain Name from Domain.com
 
