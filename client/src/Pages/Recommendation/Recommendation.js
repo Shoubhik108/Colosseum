@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Grid, Typography } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import RecomendationCard from "../../components/RecomendationCard/RecomendationCard";
 
@@ -25,14 +26,14 @@ const options = {
 };
 
 export default function Recommendation() {
-  const [movies, setMovies] = React.useState([]);
+  const [movies, setMovies] = React.useState(null);
   React.useEffect(() => {
     axios
       .request(options)
-      .then(function (response) {
+      .then(function(response) {
         setMovies(response.data.results);
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.error(error);
       });
   }, []);
@@ -42,7 +43,7 @@ export default function Recommendation() {
       <Grid
         container
         direction="row"
-        justifyContent="flex-start"
+        justifyContent="center"
         alignItems="flex-start"
         spacing={2}
         p={4}
@@ -66,11 +67,25 @@ export default function Recommendation() {
             Movie Recommendations
           </Typography>
         </Grid>
-        {movies?.map((movie, i) => (
-          <Grid item key={i}>
-            <RecomendationCard movie={movie} />
+        {movies ? (
+          movies.map((movie, i) => (
+            <Grid item key={i}>
+              <RecomendationCard movie={movie} />
+            </Grid>
+          ))
+        ) : (
+          <Grid
+            item
+            xs={12}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <CircularProgress sx={{ color: "#16213E" }} />
           </Grid>
-        ))}
+        )}
       </Grid>
     </>
   );
