@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carattere&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap");
 
@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -51,6 +52,6 @@ main {
   color: black;
 }
 
-.heroBg{
+.heroBg {
   background-image: url(./assets/hero_home.png);
 }
