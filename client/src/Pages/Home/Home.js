@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className='pt-72 flex flex-col items-center justify-center px-44 text-center'>
         <h1 className='text-white text-3xl'>What is Colosseum</h1>
-        <p className='text-white text-2xl'>Colosseum is a web application that allows you to create a new event to watch movies with friends or to join an public evet that is already created. It is a platform that allows you to create events and invite friends to watch movies together and chat along. Users can also join an event that is already created and donate some money to the event if they wish to(to motivate and help the event).
+        <p className='text-white text-2xl'>Colosseum is a web application that allows you to create a new event to watch movies with friends or to join a public event that is already created. It is a platform that allows you to create events and invite friends to watch movies together and chat along. Users can also join an event that is already created and donate some money to the event if they wish to(to motivate and help the event).
         </p>
       </div>
 

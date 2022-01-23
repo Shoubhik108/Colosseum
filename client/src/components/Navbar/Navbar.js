@@ -38,7 +38,7 @@ export default function Header() {
               <div onClick={() => setShowInvite(true)} className='lg:inline-flex lg:w-auto mt-4'>
                 <li className="flex w-full text-white hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md cursor-pointer items-center mb-6">
                   <AddIcon className="text-lg" />
-                  <div className="pl-2">Invite people</div>
+                  <div className="pl-2">Create Event</div>
                 </li>
               </div>
 
