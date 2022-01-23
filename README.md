@@ -2,7 +2,7 @@
 
 ## 💡 Inspiration
 
-Due to COVID-19, we are disconnected from the outer world and we miss to got out and watch threather and movies with our friends and family. We are in a situation where we can't do anything and we can't even go out and play with our friends. On the other hand the threater workers are losing their jobs and they are not getting enough money to pay for their living. So we decided to build a platform that will help them to get back to work and to get enough money to pay for their living and to get back to having fun with your friends and family.
+Due to COVID-19, we are disconnected from the outer world and we miss to got out and watch theatre and movies with our friends and family. We are in a situation where we can't do anything and we can't even go out and play with our friends. On the other hand the threater workers are losing their jobs and they are not getting enough money to pay for their living. So we decided to build a platform that will help them to get back to work and to get enough money to pay for their living and to get back to having fun with your friends and family.
 
 ## 💻 What it does
 
