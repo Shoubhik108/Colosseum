@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Grid, Typography } from "@mui/material";
 
-import RecomendationCard from "../../Components/RecomendationCard/RecomendationCard";
+import RecomendationCard from "../../components/RecomendationCard/RecomendationCard";
 
 const options = {
   method: "GET",
@@ -42,7 +42,7 @@ export default function Recommendation() {
       <Grid
         container
         direction="row"
-        justifyContent="flex-start"
+        justifyContent="center"
         alignItems="flex-start"
         spacing={2}
         p={4}
