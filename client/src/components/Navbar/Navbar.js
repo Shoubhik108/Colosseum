@@ -1,128 +1,102 @@
-import React, { useState } from "react";
-import { Transition } from "@headlessui/react";
+import React, { useState, useEffect } from 'react'
+import AddIcon from '@mui/icons-material/Add';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import DateTimePicker from 'react-datetime-picker';
+import Select from 'react-select';
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Header() {
+
+  const [showInvite, setShowInvite] = useState(false);
+  const [value, onChange] = useState(new Date());
+
+  const aquaticCreatures = [
+    { label: 'Go Live', value: 'Go Live' },
+    { label: 'Schedule Event', value: 'Schedule Event' },
+  ];
+
+
   return (
-    <div>
-      <nav className="bg-gray-800 z-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 text-white text-lg font-large">
-                <a href="/"> Colosseum</a>
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="/"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Home
-                  </a>
+    <div className='z-100'>
 
-                  <a
-                    href="/recommendation"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Recommendation
-                  </a>
-                  <a
-                    href="/schedule"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Schedule
-                  </a>
-                </div>
-                <div className="flex items-baseline space-x-4">
-                  <button>Add Event</button>
-                </div>
+      <div>
+        <nav className="flex items-center bg-gray-800 py-2 flex-wrap px-4">
+          <a href="/"><span className="p-2 mr-4 inline-flex text-white items-center tracking-wider text-2xl md:text-4xl cursor-pointer font-base">
+            Colosseum
+          </span></a>
+
+          <div className="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" >
+            <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full text-xl lg:items-center items-start flex flex-col lg:h-auto font-sourceSerif" >
+
+              <a href="/">
+                <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover text-white hover:bg-gray-200 hover:text-black cursor-pointer">Home</span>
+              </a>
+
+              <a href="/recommendation">
+                <span className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center dark:hover:bg-navHover text-white hover:bg-gray-200 hover:text-black cursor-pointer">Recommendations</span>
+              </a>
+
+              <div onClick={() => setShowInvite(true)} className='lg:inline-flex lg:w-auto mt-4'>
+                <li className="flex w-full text-white hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md cursor-pointer items-center mb-6">
+                  <AddIcon className="text-lg" />
+                  <div className="pl-2">Invite people</div>
+                </li>
               </div>
-            </div>
-            <div className="-mr-2 flex md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-                {!isOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
+
+              {showInvite ? (
+                <>
+                  <div
+                    className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                )}
-              </button>
+
+                    <div className="relative w-auto my-6 mx-auto max-w-3xl">
+
+
+                      <div className="border-0 rounded-3xl shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none  px-36 py-8">
+
+                        <div className="flex items-center justify-center p-5">
+                          <h3 className="text-3xl ">
+                            Create Event
+                          </h3>
+                          <div className="absolute top-6 right-6 cursor-pointer" onClick={() => setShowInvite(false)}>
+                            <CloseRoundedIcon className="text-red-600 text-2xl" />
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                          <input className="my-2 bg-white rounded-lg placeholder:text-center text-xl p-1 border-2 border-fontColor" placeholder="Event Name" />
+
+                          <input className="my-2 bg-white rounded-lg placeholder:text-center text-xl p-1 border-2 border-fontColor" placeholder="Event Details" />
+
+                          <DateTimePicker
+                            onChange={onChange}
+                            className="py-4 h-16"
+                            value={value}
+                          />
+
+                          <Select
+                            options={aquaticCreatures}
+                            className="py-4 h-36 z-50"
+                          />
+
+                        </div>
+
+                        <a href="/golive" >
+                          <div className="shadow-2xl shadow-darkBg items-center text-center cursor-pointer">
+                            <div className="text-lg py-1 px-2 rounded-full text-white bg-gradient-to-r from-blue-400 to-orange-500 via-purple-500 font-bold tracking-wide">Create Event</div>
+                          </div>
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+                </>
+              ) : null}
+
             </div>
           </div>
-        </div>
-
-        <Transition
-          show={isOpen}
-          enter="transition ease-out duration-100 transform"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-75 transform"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Home
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Recommendation
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Schedule
-                </a>
-              </div>
-            </div>
-          )}
-        </Transition>
-      </nav>
+        </nav>
+      </div>
     </div>
-  );
+  )
 }

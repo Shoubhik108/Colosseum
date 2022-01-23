@@ -12,7 +12,7 @@ export default function Home() {
       <div className="heroBg bg-no-repeat bg-cover bg-center w-full h-96 opacity-40 bg-black"></div>
       <div className="absolute top-44 text-white left-1/4">
         <div className='flex flex-col items-center justify-center'>
-          <h1 className='text-3xl font-bold items-start '>Welcome to Colosseum</h1>
+          <h1 className='text-4xl font-bold items-start '>Welcome to Colosseum</h1>
           <h1 className='text-xl font-bold'>'Enjoy the real feeling of visiting theaters and movies with the ease of home'</h1>
 
           <div className='md:grid md:grid-cols-3 '>
