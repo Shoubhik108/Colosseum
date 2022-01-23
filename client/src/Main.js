@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import GoLive from './Pages/GoLive/GoLive';
 import Schedule from './Pages/Schedule/ScheduleEvent';
+import Recommendation from './Pages/Recommendation/Recommendation';
 
 export default function Main() {
     return (
@@ -11,6 +12,7 @@ export default function Main() {
                 <Route path="/" element={<Home />} />
                 <Route path="/golive" element={<GoLive />} />
                 <Route path="/schedule" element={<Schedule />} />
+                <Route path="/recommendation" element={<Recommendation />} />
             </Routes>
         </BrowserRouter>
     );

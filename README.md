@@ -15,7 +15,7 @@ Colosseum is a web application that allows you to create a new event to watch mo
 - MongoDB: For database
 - Docker: For deployment
 - Firebase: For authentication and storage
-- Tensorflow: For movie and show recommendations
+- Python & Tensorflow: For movie and show recommendations
 
 ## Best Domain Name from Domain.com
 

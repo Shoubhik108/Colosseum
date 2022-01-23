@@ -50,3 +50,7 @@ main {
   background: #e5e5ea;
   color: black;
 }
+
+.heroBg{
+  background-image: url(./assets/hero_home.png);
+}
